@@ -1,0 +1,60 @@
+$deepBlue : #032f3e;
+$offWhite : #f8f9fb;
+$sectionHeading : 24px;
+$bannerHeading : 46px;
+
+//Mixin
+
+@mixin banner {
+    width: 100%;
+    position: relative;
+    color: white;
+
+    .banner-content{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    span{
+        font-size: $bannerHeading;
+        display: block;
+        font-weight: bold;
+    }
+
+}
+
+#main-nav{
+    background: $deepBlue;
+    ul {
+        width: 120%;
+    }
+    li{
+        float: left;
+        width: 14%;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        padding: 18px;
+        display: block;
+        text-align: center;
+        color: $offWhite;
+        font-size: 20px;
+    }
+}
+
+#main-nav ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section h1{
+    font-size: $sectionHeading;
+    color: $deepBlue;
+}
